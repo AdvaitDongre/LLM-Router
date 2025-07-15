@@ -1,0 +1,4 @@
+{
+  "summarize": "Summarize the following text:\n{prompt}",
+  "friendly": "You are a helpful assistant. Answer the following:\n{prompt}"
+} 
