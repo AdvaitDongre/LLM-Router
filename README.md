@@ -30,6 +30,7 @@ llm-chatservice/
 │   ├── groq_handler.py    # GROQ (OpenAI-compatible) handler
 │   └── gemini_handler.py  # Gemini (Google Generative AI) handler
 ├── utils/
+│   ├── cache.py           # used for faster responses 
 │   ├── logger.py          # Logging utilities (JSON/CSV)
 │   └── tokens.py          # Token estimation utility
 ├── tests/
@@ -39,6 +40,7 @@ llm-chatservice/
 │   └── prompts.csv        # CSV log of all prompts
 ├── prompt_templates.json  # Prompt templates
 ├── requirements.txt       # Python dependencies
+├── codes.txt              # contains the codes that can we used for the service
 ├── Dockerfile             # Docker support
 ├── .env                   # Environment variables (not committed)
 ├── streamlit_app.py       # Streamlit frontend
