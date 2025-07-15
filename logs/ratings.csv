@@ -1,0 +1,5 @@
+timestamp,prompt_id,model,rating,feedback
+2025-07-15T20:02:35.910426,abc123,groq,4,Good answer but a bit slow
+2025-07-15T20:03:50.228223,abc123,groq,4,Good answer but a bit slow
+2025-07-15T20:11:16.918928,abc123,groq,4,Good answer but a bit slow
+2025-07-15T20:19:03.495545,8292d34d0fbeae44,llama-3.1-8b-instant,3,nice

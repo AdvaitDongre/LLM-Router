@@ -1,0 +1,145 @@
+[
+  {
+    "timestamp": "2025-07-15T19:45:46.596064",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 157,
+    "token_count": 50,
+    "prompt_id": "f6e584d31bed1785",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:45:46.596064",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 0,
+    "token_count": null,
+    "prompt_id": "f6e584d31bed1785",
+    "rating": null,
+    "from_cache": true
+  },
+  {
+    "timestamp": "2025-07-15T19:47:01.909657",
+    "prompt": "What is the capital of France?",
+    "model": "meta-llama/llama-4-maverick-17b-128e-instruct",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 133,
+    "token_count": 25,
+    "prompt_id": "8c9906db2577e093",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:47:15.749387",
+    "prompt": "What is the capital of France?",
+    "model": "meta-llama/llama-4-scout-17b-16e-instruct",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 152,
+    "token_count": 25,
+    "prompt_id": "8c7bfed899199eee",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:47:31.458995",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 136,
+    "token_count": 50,
+    "prompt_id": "4e23373ac1e78981",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:47:51.865734",
+    "prompt": "What is the capital of France?",
+    "model": "moonshotai/kimi-k2-instruct",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 431,
+    "token_count": 31,
+    "prompt_id": "2b35f7d22567aedb",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:45:46.596064",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 0,
+    "token_count": null,
+    "prompt_id": "f6e584d31bed1785",
+    "rating": null,
+    "from_cache": true
+  },
+  {
+    "timestamp": "2025-07-15T19:54:59.243169",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 6370,
+    "token_count": 50,
+    "prompt_id": "0d167128b610789e",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:55:05.851983",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 142,
+    "token_count": 50,
+    "prompt_id": "0569044d069c4529",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T19:58:37.465158",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 485,
+    "token_count": 50,
+    "prompt_id": "22afc15408581315",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:11:30.209800",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 139,
+    "token_count": 50,
+    "prompt_id": "948ecea473800b4d",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:13:09.338945",
+    "prompt": "Write a short story about a cat who discovers a magic hat.",
+    "model": "llama-3.1-8b-instant",
+    "response": "**Whiskers and Wonder**\n\nIn a cozy little house on a quiet street, there lived a beautiful calico cat named Luna. Luna was a curious and adventurous cat, always exploring every nook and cranny of her home. One sunny afternoon, while prowling through the attic, Luna stumbled upon an old trunk that had been hidden away for years. The trunk was dusty and worn, but Luna's curiosity got the best of her. She batted at the rusty lock with her paw, and to her surprise, it creaked open.\n\n Inside the trunk, Luna found a mysterious hat. It was a bright red top hat with a wide brim and a tall crown. The hat seemed to glow with an otherworldly light, and Luna was immediately drawn to it. She reached out a paw to touch the hat, and as soon as she did, she felt a strange tingling sensation.\n\nSuddenly, Luna was transported to a magical world. The attic was gone, replaced by a lush forest filled with towering trees and sparkling fountains. Luna's eyes grew wide as she explored this new world, chasing after butterflies and sniffing at wildflowers.\n\nAs she wandered through the forest, Luna discovered that she had the power to make anything she wanted come true. She wished for a bowl of milk, and a delicious bowl appeared before her. She wished for a ball of yarn, and a fluffy ball bounced into her path. Luna was overjoyed, and she spent hours playing and exploring this magical world.\n\nBut as the sun began to set, Luna realized that she needed to return home. She looked around, trying to find a way back to her own world. That's when she spotted the magic hat, still perched on her head. She reached up and touched the hat, and the world around her began to fade away.\n\nLuna found herself back in the attic, but she was no longer alone. Her owner, a kind old woman named Mrs. Jenkins, was sitting in a chair, looking at Luna with a knowing glint in her eye. \"I knew you'd find it,\" she said, smiling. \"That hat has been waiting for you for a long time, Luna. You have the power to make magic happen. Use it wisely.\"\n\nFrom that day on, Luna wore the magic hat whenever she wanted to explore the magical world. She used her powers to help those in need, making sure the house was always clean and the food was always plentiful. And whenever she needed a break from her responsibilities,",
+    "latency_ms": 1052,
+    "token_count": 560,
+    "prompt_id": "0a8d9f5ffe553ffd",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:18:45.042379",
+    "prompt": "heyy bro",
+    "model": "llama-3.1-8b-instant",
+    "response": "What's up? Is there something I can help you with or you just wanna chat?",
+    "latency_ms": 184,
+    "token_count": 57,
+    "prompt_id": "8292d34d0fbeae44",
+    "rating": null,
+    "from_cache": false
+  }
+]

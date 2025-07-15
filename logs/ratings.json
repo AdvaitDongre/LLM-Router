@@ -1,0 +1,30 @@
+[
+  {
+    "timestamp": "2025-07-15T20:02:35.910426",
+    "prompt_id": "abc123",
+    "model": "groq",
+    "rating": 4,
+    "feedback": "Good answer but a bit slow"
+  },
+  {
+    "timestamp": "2025-07-15T20:03:50.228223",
+    "prompt_id": "abc123",
+    "model": "groq",
+    "rating": 4,
+    "feedback": "Good answer but a bit slow"
+  },
+  {
+    "timestamp": "2025-07-15T20:11:16.918928",
+    "prompt_id": "abc123",
+    "model": "groq",
+    "rating": 4,
+    "feedback": "Good answer but a bit slow"
+  },
+  {
+    "timestamp": "2025-07-15T20:19:03.495545",
+    "prompt_id": "8292d34d0fbeae44",
+    "model": "llama-3.1-8b-instant",
+    "rating": 3,
+    "feedback": "nice"
+  }
+]

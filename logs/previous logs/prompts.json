@@ -1,0 +1,463 @@
+[
+  {
+    "timestamp": "2024-07-15T12:00:00Z",
+    "prompt": "What is the capital of France?",
+    "model": "groq",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 120,
+    "token_count": 12,
+    "prompt_id": "abc123groq1",
+    "rating": 5
+  },
+  {
+    "timestamp": "2024-07-15T12:01:00Z",
+    "prompt": "Summarize the following text: FastAPI is a modern web framework.",
+    "model": "groq",
+    "response": "FastAPI is a modern Python web framework.",
+    "latency_ms": 150,
+    "token_count": 15,
+    "prompt_id": "abc123groq2",
+    "rating": 4
+  },
+  {
+    "timestamp": "2024-07-15T12:02:00Z",
+    "prompt": "Tell me a joke.",
+    "model": "groq",
+    "response": "Why did the chicken cross the road? To get to the other side!",
+    "latency_ms": 110,
+    "token_count": 18,
+    "prompt_id": "abc123groq3",
+    "rating": 3
+  },
+  {
+    "timestamp": "2024-07-15T12:03:00Z",
+    "prompt": "What is the capital of Germany?",
+    "model": "gemini",
+    "response": "The capital of Germany is Berlin.",
+    "latency_ms": 130,
+    "token_count": 13,
+    "prompt_id": "abc123gemini1",
+    "rating": 2,
+    "rating_timestamp": "2025-07-15T18:06:43.228317"
+  },
+  {
+    "timestamp": "2024-07-15T12:04:00Z",
+    "prompt": "Summarize the following text: Gemini is a Google AI model.",
+    "model": "gemini",
+    "response": "Gemini is an AI model developed by Google.",
+    "latency_ms": 140,
+    "token_count": 14,
+    "prompt_id": "abc123gemini2",
+    "rating": 4
+  },
+  {
+    "timestamp": "2024-07-15T12:05:00Z",
+    "prompt": "Tell me a fun fact.",
+    "model": "gemini",
+    "response": "Honey never spoils. Archaeologists have found edible honey in ancient tombs!",
+    "latency_ms": 125,
+    "token_count": 20,
+    "prompt_id": "abc123gemini3",
+    "rating": 5
+  },
+  {
+    "timestamp": "2025-07-15T17:51:41.351140",
+    "prompt": "What is the capital of France?",
+    "model": "groq",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 138,
+    "token_count": 14,
+    "prompt_id": "88a78334d4803a74",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T17:52:01.557622",
+    "prompt": "What is the capital of France?",
+    "model": "gemini",
+    "response": "The capital of France is **Paris**.",
+    "latency_ms": 2362,
+    "token_count": 16,
+    "prompt_id": "472ebc0e142265bc",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T17:54:47.767946",
+    "prompt": "What is the capital of France?",
+    "model": "gemini",
+    "response": "The capital of France is **Paris**.",
+    "latency_ms": 2024,
+    "token_count": 16,
+    "prompt_id": "dab50ce1baaed274",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T17:54:53.939918",
+    "prompt": "What is the capital of France?",
+    "model": "gemini",
+    "response": "Paris.",
+    "latency_ms": 2096,
+    "token_count": 9,
+    "prompt_id": "f1fe5cdd7b80dfe7",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:01:59.261966",
+    "prompt": "What is the capital of France?",
+    "model": "gemini",
+    "response": "The capital of France is **Paris**.",
+    "latency_ms": 2131,
+    "token_count": 16,
+    "prompt_id": "d51c97bcc9a2df19",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:02:10.542512",
+    "prompt": "What is the capital of France?",
+    "model": "groq",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 137,
+    "token_count": 14,
+    "prompt_id": "0ba6cb1397fd3533",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:02:24.282319",
+    "prompt": "What is the capital of France?",
+    "model": "groq",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 124,
+    "token_count": 14,
+    "prompt_id": "fd6d0fb0327d13c9",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:03:18.223970",
+    "prompt": "What is the capital of France?",
+    "model": "groq",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 139,
+    "token_count": 14,
+    "prompt_id": "e41c84dca15803a5",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:03:31.039802",
+    "prompt": "Tell me a joke.",
+    "model": "gemini",
+    "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+    "latency_ms": 1120,
+    "token_count": 18,
+    "prompt_id": "2302509a3319ec6a",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:03:37.549739",
+    "prompt": "Tell me a joke.",
+    "model": "gemini",
+    "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+    "latency_ms": 808,
+    "token_count": 18,
+    "prompt_id": "c1dbe8dd7c0f0522",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:04:09.722412",
+    "prompt": "You are a helpful assistant. Answer the following:\nExplain gravity.",
+    "model": "groq",
+    "response": "Gravity is a fundamental force of nature that governs the behavior of objects with mass or energy. It's responsible for keeping us grounded on the Earth's surface, causing objects to fall towards the ground, and holding planets in orbit around their stars.\n\n**What is gravity?**\n\nIn simplest terms, gravity is a force that attracts two objects with mass towards each other. The more massive the objects, the stronger the gravitational pull. The Earth's mass, for example, creates a gravitational force that pulls objects towards its center.\n\n**How does gravity work?**\n\nAccording to Albert Einstein's Theory of General Relativity, gravity is the curvature of spacetime caused by the presence of mass and energy. Imagine spacetime as a trampoline: when you place a heavy object, like a bowling ball, on the trampoline, it warps and curves, creating a dent. Other objects, like marbles, will roll towards the bowling ball due to the curvature of the trampoline, which represents the gravitational force.\n\n**Key aspects of gravity:**\n\n1. **Universal gravitation**: Every object with mass attracts every other object with mass.\n2. **Inverse square law**: The strength of the gravitational force decreases with the square of the distance between objects.\n3. **Gravitational constant**: A fundamental constant, denoted by G, that describes the strength of the gravitational force.\n4. **Gravity's effects**: Gravity causes objects to fall, orbits planets, and warps spacetime.\n\n**Gravity in everyday life:**\n\n1. **Walking**: Gravity keeps us on the ground, resisting our upward motion.\n2. **Throwing**: Gravity causes objects to fall back down to the ground after we throw them.\n3. **Orbiting**: Gravity keeps planets and satellites in their orbits around their parent stars.\n4. **Tides**: Gravity causes the oceans to bulge, creating high and low tides.\n\nIn summary, gravity is a fundamental force that attracts objects with mass towards each other, warping spacetime and governing the behavior of celestial bodies. Its effects are ubiquitous in our daily lives, from the ground beneath our feet to the orbits of planets around stars.",
+    "latency_ms": 736,
+    "token_count": 448,
+    "prompt_id": "743de7245e0b7303",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:07:42.179447",
+    "prompt": "You are a helpful assistant. Answer the following:\nExplain gravity.",
+    "model": "gemini",
+    "response": "Gravity is one of the four fundamental forces of nature (along with the strong nuclear force, the weak nuclear force, and electromagnetism). It's the force of **attraction between any two objects that have mass or energy.**\n\nHere's a breakdown of the two main ways we understand gravity:\n\n1.  **Newton's Law of Universal Gravitation (The Classical Understanding):**\n    *   **What it is:** Sir Isaac Newton, in the late 17th century, described gravity as an invisible force that pulls objects towards each other.\n    *   **Key Principles:**\n        *   **Mass Matters:** The more massive an object is, the stronger its gravitational pull. That's why Earth pulls you down, but you don't noticeably pull the Earth up (though technically you do, just very, very slightly).\n        *   **Distance Matters:** The further apart two objects are, the weaker the gravitational force between them. This force weakens very rapidly with increasing distance.\n    *   **Examples:**\n        *   An apple falling from a tree to the ground.\n        *   The Earth orbiting the Sun.\n        *   The Moon orbiting the Earth and causing tides.\n    *   **Analogy:** Think of it like a giant invisible rope connecting every object to every other object, with bigger objects having thicker ropes, and longer ropes being weaker.\n\n2.  **Einstein's General Theory of Relativity (The Modern Understanding):**\n    *   **What it is:** In the early 20th century, Albert Einstein proposed a much more profound and accurate explanation of gravity, which goes beyond Newton's \"force.\"\n    *   **Key Idea: Spacetime Curvature:** Einstein suggested that space and time are not separate, rigid entities, but are interwoven into a flexible fabric called **spacetime**. Objects with mass (and energy) cause this fabric to **curve or warp** around them.\n    *   **How it works:** What we perceive as the \"force\" of gravity is actually objects simply following the curves in spacetime. Imagine rolling a marble on a stretched rubber sheet; if you place a bowling ball in the middle, it creates a dip. The marble, instead of going in a straight line, will curve towards the bowling ball, not because the bowling ball is \"pulling\" it with a force, but because the sheet itself is curved.\n    *   **Examples/Implications:**\n        *   The Earth doesn't orbit the Sun because the Sun is pulling it, but because the Sun's immense mass has curved the spacetime around it, and the Earth is simply following that curve.\n        *   Light, which has no mass, can also be bent by gravity (e.g., around massive stars or galaxies) because it travels through curved spacetime.\n        *   Black holes are regions where spacetime is curved so extremely that nothing, not even light, can escape.\n        *   It predicts gravitational waves – ripples in spacetime caused by accelerating massive objects (like colliding black holes).\n\n**In Summary:**\n\n*   **Newton's gravity** is a practical and accurate description for most everyday situations and even for sending rockets to the Moon. It describes *how* gravity behaves.\n*   **Einstein's gravity** is a more fundamental and accurate explanation, especially for extreme conditions (like black holes) or very precise measurements. It describes *why* gravity exists and *what* it fundamentally is.\n\nGravity is the fundamental reason why planets form, stars ignite, galaxies hold together, and why you stay firmly on the ground!",
+    "latency_ms": 11606,
+    "token_count": 747,
+    "prompt_id": "04a883b19ac25a86",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:13:31.847949",
+    "prompt": "Tell me a joke.",
+    "model": "gemini",
+    "response": "Why don't scientists trust atoms?\n\nBecause they make up everything!",
+    "latency_ms": 1326,
+    "token_count": 18,
+    "prompt_id": "3d3609295c1cdc96",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:24:22.915833",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 119,
+    "token_count": 14,
+    "prompt_id": "d7f16ec24559be03",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:27:54.416489",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 155,
+    "token_count": 14,
+    "prompt_id": "30ddbc9a871f1f1d",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:41:11.409697",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 117,
+    "token_count": 50,
+    "prompt_id": "e3ed26c9155f3c1b",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:41:58.837657",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 135,
+    "token_count": 50,
+    "prompt_id": "550230ff7ffe0f81",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:54:56.202354",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 154,
+    "token_count": 50,
+    "prompt_id": "8a10062ed318ce70",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:55:55.990779",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 1294,
+    "token_count": 50,
+    "prompt_id": "06411d97978787c4",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:56:08.389817",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 138,
+    "token_count": 50,
+    "prompt_id": "2ef4698a33975b09",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:58:01.703698",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 159,
+    "token_count": 50,
+    "prompt_id": "3d91156dbb510dac",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:58:13.679473",
+    "prompt": "What is the capital of France?",
+    "model": "gemini-2.5-flash",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 908,
+    "token_count": 40,
+    "prompt_id": "a65531d4db213206",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:58:27.573599",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 108,
+    "token_count": 50,
+    "prompt_id": "238fef84e31199f2",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:58:45.315282",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 137,
+    "token_count": 50,
+    "prompt_id": "22cbe4ef617d6871",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T18:58:56.948380",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 147,
+    "token_count": 50,
+    "prompt_id": "7ece2ca4d4babba8",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:01:56.009642",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 142,
+    "token_count": 50,
+    "prompt_id": "43aa29a00dee4d6a",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:02:00.726384",
+    "prompt": "What is the capital of France?",
+    "model": "gemini-2.5-flash",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 657,
+    "token_count": 39,
+    "prompt_id": "37f7ed515066ba0d",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:11:55.400730",
+    "prompt": "What is the capital of France?",
+    "model": "gemini-2.5-flash",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 902,
+    "token_count": 37,
+    "prompt_id": "be2022c8ed4b481c",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:12:05.697637",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 145,
+    "token_count": 50,
+    "prompt_id": "6f58ae78fac2d2ba",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:12:32.321752",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 107,
+    "token_count": 50,
+    "prompt_id": "e15622ee8352672e",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:12:39.421805",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 140,
+    "token_count": 50,
+    "prompt_id": "4d7044329984904f",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:18:57.316545",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 138,
+    "token_count": 50,
+    "prompt_id": "d04fef0f195f1d98",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:19:16.955302",
+    "prompt": "Is this safe?",
+    "model": "meta-llama/llama-guard-4-12b",
+    "response": "safe",
+    "latency_ms": 369,
+    "token_count": 205,
+    "prompt_id": "c1ecc9e7b0c65fee",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:19:27.393741",
+    "prompt": "Summarize this text.",
+    "model": "gemini-2.5-flash",
+    "response": "Please provide the text you would like me to summarize! I need the content to be able to help you.",
+    "latency_ms": 3451,
+    "token_count": 259,
+    "prompt_id": "059e84b3ea7d8ddc",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:30:12.517818",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 155,
+    "token_count": 50,
+    "prompt_id": "1e21c07e18920cf8",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:31:18.391872",
+    "prompt": "What is the capital of France?",
+    "model": "gemini-2.5-pro",
+    "response": "The capital of France is **Paris**.",
+    "latency_ms": 21209,
+    "token_count": 462,
+    "prompt_id": "cbf8f932eb296044",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:36:35.327655",
+    "prompt": "What is the capital of France?",
+    "model": "deepseek-r1-distill-llama-70b",
+    "response": "<think>\nAlright, so I need to figure out the capital of France. Hmm, let me think about this. I remember learning some geography in school, but I'm not entirely sure. I know France is a country in Europe, and I think its capital is a well-known city. \n\nWait, is it Paris? That sounds familiar. Paris is a major city, right? I've heard of the Eiffel Tower, which is in Paris. But I'm not 100% certain. Could it be another city? Maybe Lyon or Marseille? No, those are other cities in France, but I don't think they're the capital. \n\nI think capitals are usually the biggest cities or the seats of government. Paris is the largest city in France and I believe the government is centered there. So, it must be Paris. Yeah, I'm pretty sure now. The Eiffel Tower, the Louvre Museum, and other landmarks are in Paris, which is the capital. \n\nI don't think I've heard of any other city in France being the capital. Maybe I can double-check by thinking about other European capitals. Like, Germany's capital is Berlin, Italy's is Rome, Spain's is Madrid. So, France's should be Paris. Yeah, that makes sense. I'm confident now that Paris is the capital of France.\n</think>\n\nThe capital of France is Paris. This city is well-known for landmarks like the Eiffel Tower and the Louvre Museum, and it serves as the political and cultural center of the country.",
+    "latency_ms": 1551,
+    "token_count": 326,
+    "prompt_id": "a281087e1a28b2c1",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:37:32.446064",
+    "prompt": "What is the capital of France?",
+    "model": "meta-llama/llama-guard-4-12b",
+    "response": "safe",
+    "latency_ms": 449,
+    "token_count": 208,
+    "prompt_id": "d671954a8e90e47e",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:37:40.621505",
+    "prompt": "What is the capital of France?",
+    "model": "meta-llama/llama-guard-4-12b",
+    "response": "safe",
+    "latency_ms": 356,
+    "token_count": 208,
+    "prompt_id": "11c76f8432c305b1",
+    "rating": null
+  },
+  {
+    "timestamp": "2025-07-15T19:38:07.286799",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.1-8b-instant",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 138,
+    "token_count": 50,
+    "prompt_id": "2573e32680bc1960",
+    "rating": null
+  }
+]

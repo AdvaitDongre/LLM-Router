@@ -1,0 +1,76 @@
+timestamp,prompt,model,response,latency_ms,token_count,prompt_id,rating
+2024-07-15T12:00:00Z,What is the capital of France?,groq,The capital of France is Paris.,120,12,abc123groq1,5
+2024-07-15T12:01:00Z,Summarize the following text: FastAPI is a modern web framework.,groq,FastAPI is a modern Python web framework.,150,15,abc123groq2,4
+2024-07-15T12:02:00Z,Tell me a joke.,groq,Why did the chicken cross the road? To get to the other side!,110,18,abc123groq3,3
+2025-07-15T18:07:42.179447,"You are a helpful assistant. Answer the following:
+Explain gravity.",gemini,"Gravity is one of the four fundamental forces of nature (along with the strong nuclear force, the weak nuclear force, and electromagnetism). It's the force of **attraction between any two objects that have mass or energy.**
+
+Here's a breakdown of the two main ways we understand gravity:
+
+1.  **Newton's Law of Universal Gravitation (The Classical Understanding):**
+    *   **What it is:** Sir Isaac Newton, in the late 17th century, described gravity as an invisible force that pulls objects towards each other.
+    *   **Key Principles:**
+        *   **Mass Matters:** The more massive an object is, the stronger its gravitational pull. That's why Earth pulls you down, but you don't noticeably pull the Earth up (though technically you do, just very, very slightly).
+        *   **Distance Matters:** The further apart two objects are, the weaker the gravitational force between them. This force weakens very rapidly with increasing distance.
+    *   **Examples:**
+        *   An apple falling from a tree to the ground.
+        *   The Earth orbiting the Sun.
+        *   The Moon orbiting the Earth and causing tides.
+    *   **Analogy:** Think of it like a giant invisible rope connecting every object to every other object, with bigger objects having thicker ropes, and longer ropes being weaker.
+
+2.  **Einstein's General Theory of Relativity (The Modern Understanding):**
+    *   **What it is:** In the early 20th century, Albert Einstein proposed a much more profound and accurate explanation of gravity, which goes beyond Newton's ""force.""
+    *   **Key Idea: Spacetime Curvature:** Einstein suggested that space and time are not separate, rigid entities, but are interwoven into a flexible fabric called **spacetime**. Objects with mass (and energy) cause this fabric to **curve or warp** around them.
+    *   **How it works:** What we perceive as the ""force"" of gravity is actually objects simply following the curves in spacetime. Imagine rolling a marble on a stretched rubber sheet; if you place a bowling ball in the middle, it creates a dip. The marble, instead of going in a straight line, will curve towards the bowling ball, not because the bowling ball is ""pulling"" it with a force, but because the sheet itself is curved.
+    *   **Examples/Implications:**
+        *   The Earth doesn't orbit the Sun because the Sun is pulling it, but because the Sun's immense mass has curved the spacetime around it, and the Earth is simply following that curve.
+        *   Light, which has no mass, can also be bent by gravity (e.g., around massive stars or galaxies) because it travels through curved spacetime.
+        *   Black holes are regions where spacetime is curved so extremely that nothing, not even light, can escape.
+        *   It predicts gravitational waves – ripples in spacetime caused by accelerating massive objects (like colliding black holes).
+
+**In Summary:**
+
+*   **Newton's gravity** is a practical and accurate description for most everyday situations and even for sending rockets to the Moon. It describes *how* gravity behaves.
+*   **Einstein's gravity** is a more fundamental and accurate explanation, especially for extreme conditions (like black holes) or very precise measurements. It describes *why* gravity exists and *what* it fundamentally is.
+
+Gravity is the fundamental reason why planets form, stars ignite, galaxies hold together, and why you stay firmly on the ground!",11606,747,04a883b19ac25a86,
+2025-07-15T18:13:31.847949,Tell me a joke.,gemini,"Why don't scientists trust atoms?
+
+Because they make up everything!",1326,18,3d3609295c1cdc96,
+2025-07-15T18:24:22.915833,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,119,14,d7f16ec24559be03,
+2025-07-15T18:27:54.416489,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,155,14,30ddbc9a871f1f1d,
+2025-07-15T18:41:11.409697,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,117,50,e3ed26c9155f3c1b,
+2025-07-15T18:41:58.837657,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,135,50,550230ff7ffe0f81,
+2025-07-15T18:54:56.202354,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,154,50,8a10062ed318ce70,
+2025-07-15T18:55:55.990779,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,1294,50,06411d97978787c4,
+2025-07-15T18:56:08.389817,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,138,50,2ef4698a33975b09,
+2025-07-15T18:58:01.703698,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,159,50,3d91156dbb510dac,
+2025-07-15T18:58:13.679473,What is the capital of France?,gemini-2.5-flash,The capital of France is Paris.,908,40,a65531d4db213206,
+2025-07-15T18:58:27.573599,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,108,50,238fef84e31199f2,
+2025-07-15T18:58:45.315282,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,137,50,22cbe4ef617d6871,
+2025-07-15T18:58:56.948380,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,147,50,7ece2ca4d4babba8,
+2025-07-15T19:01:56.009642,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,142,50,43aa29a00dee4d6a,
+2025-07-15T19:02:00.726384,What is the capital of France?,gemini-2.5-flash,The capital of France is Paris.,657,39,37f7ed515066ba0d,
+2025-07-15T19:11:55.400730,What is the capital of France?,gemini-2.5-flash,The capital of France is Paris.,902,37,be2022c8ed4b481c,
+2025-07-15T19:12:05.697637,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,145,50,6f58ae78fac2d2ba,
+2025-07-15T19:12:32.321752,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,107,50,e15622ee8352672e,
+2025-07-15T19:12:39.421805,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,140,50,4d7044329984904f,
+2025-07-15T19:18:57.316545,What is the capital of France?,llama-3.3-70b-versatile,The capital of France is Paris.,138,50,d04fef0f195f1d98,
+2025-07-15T19:19:16.955302,Is this safe?,meta-llama/llama-guard-4-12b,safe,369,205,c1ecc9e7b0c65fee,
+2025-07-15T19:19:27.393741,Summarize this text.,gemini-2.5-flash,Please provide the text you would like me to summarize! I need the content to be able to help you.,3451,259,059e84b3ea7d8ddc,
+2025-07-15T19:30:12.517818,What is the capital of France?,llama-3.3-70b-versatile,The capital of France is Paris.,155,50,1e21c07e18920cf8,
+2025-07-15T19:31:18.391872,What is the capital of France?,gemini-2.5-pro,The capital of France is **Paris**.,21209,462,cbf8f932eb296044,
+2025-07-15T19:36:35.327655,What is the capital of France?,deepseek-r1-distill-llama-70b,"<think>
+Alright, so I need to figure out the capital of France. Hmm, let me think about this. I remember learning some geography in school, but I'm not entirely sure. I know France is a country in Europe, and I think its capital is a well-known city. 
+
+Wait, is it Paris? That sounds familiar. Paris is a major city, right? I've heard of the Eiffel Tower, which is in Paris. But I'm not 100% certain. Could it be another city? Maybe Lyon or Marseille? No, those are other cities in France, but I don't think they're the capital. 
+
+I think capitals are usually the biggest cities or the seats of government. Paris is the largest city in France and I believe the government is centered there. So, it must be Paris. Yeah, I'm pretty sure now. The Eiffel Tower, the Louvre Museum, and other landmarks are in Paris, which is the capital. 
+
+I don't think I've heard of any other city in France being the capital. Maybe I can double-check by thinking about other European capitals. Like, Germany's capital is Berlin, Italy's is Rome, Spain's is Madrid. So, France's should be Paris. Yeah, that makes sense. I'm confident now that Paris is the capital of France.
+</think>
+
+The capital of France is Paris. This city is well-known for landmarks like the Eiffel Tower and the Louvre Museum, and it serves as the political and cultural center of the country.",1551,326,a281087e1a28b2c1,
+2025-07-15T19:37:32.446064,What is the capital of France?,meta-llama/llama-guard-4-12b,safe,449,208,d671954a8e90e47e,
+2025-07-15T19:37:40.621505,What is the capital of France?,meta-llama/llama-guard-4-12b,safe,356,208,11c76f8432c305b1,
+2025-07-15T19:38:07.286799,What is the capital of France?,llama-3.1-8b-instant,The capital of France is Paris.,138,50,2573e32680bc1960,
