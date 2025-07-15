@@ -9,6 +9,7 @@ from utils.tokens import estimate_token_count
 import json
 from datetime import datetime
 from dotenv import load_dotenv
+from utils.cache import get_cached_response, store_response
 
 load_dotenv()
 
@@ -26,7 +27,7 @@ class ChatRequest(BaseModel):
     template: Optional[str] = None
 
 @app.post('/chat')
-async def chat_endpoint(request: Request, model: str = Query(...)):
+async def chat_endpoint(request: Request, model: str = Query(...), ignore_cache: bool = Query(False)):
     from models.groq_handler import GroqHandler
     from models.gemini_handler import GeminiHandler
     body = await request.json()
@@ -36,6 +37,21 @@ async def chat_endpoint(request: Request, model: str = Query(...)):
         raise HTTPException(status_code=400, detail='Missing prompt')
     if template and template in PROMPT_TEMPLATES:
         prompt = PROMPT_TEMPLATES[template].replace('{prompt}', prompt)
+    # Check cache first unless ignore_cache is True
+    if not ignore_cache:
+        cached_response, cached_timestamp = get_cached_response(prompt, model)
+        if cached_response is not None:
+            timestamp = cached_timestamp.isoformat() if cached_timestamp else None
+            prompt_id = get_prompt_id(timestamp, prompt, model)
+            log_interaction(timestamp, prompt, model, cached_response, 0, None, prompt_id, from_cache=True)
+            return JSONResponse({
+                'prompt_id': prompt_id,
+                'model_used': model,
+                'response_text': cached_response,
+                'latency_ms': 0,
+                'token_count': None,
+                'from_cache': True
+            })
     # Provider detection for Groq and Google
     def is_gemini(m):
         return m and m.startswith('gemini')
@@ -118,13 +134,16 @@ async def chat_endpoint(request: Request, model: str = Query(...)):
         raise HTTPException(status_code=400, detail=f"Unknown model provider for model: {model}")
     timestamp = datetime.utcnow().isoformat()
     prompt_id = get_prompt_id(timestamp, prompt, model_used)
-    log_interaction(timestamp, prompt, model_used, response_text, latency_ms, token_count, prompt_id)
+    # Store in cache
+    store_response(prompt, model_used, response_text, datetime.utcnow())
+    log_interaction(timestamp, prompt, model_used, response_text, latency_ms, token_count, prompt_id, from_cache=False)
     return JSONResponse({
         'prompt_id': prompt_id,
         'model_used': model_used,
         'response_text': response_text,
         'latency_ms': latency_ms,
-        'token_count': token_count
+        'token_count': token_count,
+        'from_cache': False
     })
 
 @app.get('/models')
@@ -133,12 +152,9 @@ def list_models():
         "available_models": [
             "llama-3.1-8b-instant",  # via Groq
             "llama-3.3-70b-versatile",  # via Groq
-            "meta-llama/llama-guard-4-12b",  # via Groq
             "deepseek-r1-distill-llama-70b",  # via Groq
             "meta-llama/llama-4-maverick-17b-128e-instruct",  # via Groq
             "meta-llama/llama-4-scout-17b-16e-instruct",  # via Groq
-            "meta-llama/llama-prompt-guard-2-22m",  # via Groq
-            "meta-llama/llama-prompt-guard-2-86m",  # via Groq
             "mistral-saba-24b",  # via Groq
             "moonshotai/kimi-k2-instruct",  # via Groq
             "gemini-2.5-pro",  # Gemini 2.5 Pro

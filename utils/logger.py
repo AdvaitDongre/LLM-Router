@@ -9,7 +9,7 @@ CSV_LOG = os.path.join(LOG_DIR, 'prompts.csv')
 
 log_lock = Lock()
 
-def log_interaction(timestamp, prompt, model, response, latency, token_count, prompt_id):
+def log_interaction(timestamp, prompt, model, response, latency, token_count, prompt_id, from_cache=False):
     entry = {
         'timestamp': timestamp,
         'prompt': prompt,
@@ -18,7 +18,8 @@ def log_interaction(timestamp, prompt, model, response, latency, token_count, pr
         'latency_ms': latency,
         'token_count': token_count,
         'prompt_id': prompt_id,
-        'rating': None
+        'rating': None,
+        'from_cache': from_cache
     }
     with log_lock:
         # JSON log
