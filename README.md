@@ -6,19 +6,18 @@ A FastAPI-based backend to route chat prompts to either GROQ (OpenAI-compatible,
 
 ## Features
 - **Supports 12+ models** (see below for full list; easily extensible)
-- **/chat** endpoint: Route prompt to GROQ or Gemini, with fallback, retry, latency/tokens, and prompt templates (with variable substitution)
 - **ignore_cache**: Force fresh response, bypassing persistent cache (see usage examples)
+- **Persistent SQLite caching**: Fast repeated responses, cache bypass option
+- **Prompt templates**: Use and customize prompt templates with variable substitution
+- **Token usage estimation**: Model-specific heuristics, tiktoken if available
+- **Analytics**: Real-time stats, ratings, feedback, and usage
+- **/chat** endpoint: Route prompt to GROQ or Gemini, with fallback, retry, latency/tokens, and prompt templates (with variable substitution)
 - **/rate** endpoint: Rate a previous response and provide feedback
 - **/stats** endpoint: Analytics (model usage, avg latency, avg rating, fallback count, total prompts)
 - **/models** endpoint: List all supported models
-- **Prompt templates**: Use and customize prompt templates with variable substitution
-- **Persistent SQLite caching**: Fast repeated responses, cache bypass option
 - **Structured logging**: All interactions and ratings to `logs/prompts.json` and `logs/prompts.csv`
-- **Token usage estimation**: Model-specific heuristics, tiktoken if available
-- **Fallback and retry logic**: Automatic fallback to alternate provider/model on failure
-- **Analytics**: Real-time stats, ratings, feedback, and usage
+- **Fallback and retry logic**: Automatic fallback to alternate provider/model on failure     
 - **Streamlit frontend**: Modern UI for chat, analytics, ratings, and session management
-- **Pytest test suite**: With mocks for endpoints and fallback
 
 ---
 
