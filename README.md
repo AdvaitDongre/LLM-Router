@@ -19,7 +19,6 @@ A FastAPI-based backend to route chat prompts to either GROQ (OpenAI-compatible,
 - **Analytics**: Real-time stats, ratings, feedback, and usage
 - **Streamlit frontend**: Modern UI for chat, analytics, ratings, and session management
 - **Pytest test suite**: With mocks for endpoints and fallback
-- **Docker support**: Easy deployment
 
 ---
 
@@ -43,7 +42,6 @@ llm-chatservice/
 ├── prompt_templates.json  # Prompt templates
 ├── requirements.txt       # Python dependencies
 ├── codes.txt              # All curl commands (Windows & Bash)
-├── Dockerfile             # Docker support
 ├── .env                   # Environment variables (not committed)
 ├── streamlit_app.py       # Streamlit frontend
 └── README.md              # This file
@@ -84,12 +82,18 @@ llm-chatservice/
 
 ## Setup
 
-1. **Clone and install dependencies:**
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/YOUR_USERNAME/llm-chatservice.git
+   cd llm-chatservice
+   ```
+
+2. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Set up your `.env` file:**
+3. **Set up your `.env` file:**
    Create a `.env` file in the project root with the following content:
    ```env
    GROQ_API_KEY=your_api_key
@@ -97,11 +101,17 @@ llm-chatservice/
    ```
    Replace the values with your actual API keys.
 
-3. **Run the server:**
+4. **Run the FastAPI server:**
    ```bash
    uvicorn main:app --reload
    ```
    The API will be available at `http://127.0.0.1:8000`.
+
+5. **(Optional) Run the Streamlit frontend:**
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+   The UI will be available at [http://localhost:8501](http://localhost:8501).
 
 ---
 
@@ -241,7 +251,6 @@ The UI will be available at [http://localhost:8501](http://localhost:8501).
 - **Analytics**: Real-time stats, ratings, feedback, and usage
 - **Streamlit Frontend**: Modern UI for all features, including analytics and session management
 - **Pytest Test Suite**: Automated tests for endpoints, fallback, and caching
-- **Docker Support**: Easy containerized deployment
 - **Environment Variables**: API keys and config via `.env`
 - **Modular Codebase**: Handlers, utils, and templates are cleanly separated
 
