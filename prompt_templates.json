@@ -1,4 +1,16 @@
-{
-  "summarize": "Summarize the following text:\n{prompt}",
-  "friendly": "You are a helpful assistant. Answer the following:\n{prompt}"
-} 
+[
+  {
+    "id": "gen_story_1",
+    "title": "Story Generator",
+    "prompt": "Write a short story about a {{character}} who discovers a {{object}}.",
+    "tags": ["creative", "story", "fun"],
+    "category": "creative writing"
+  },
+  {
+    "id": "bug_fixer_1",
+    "title": "Code Bug Fixer",
+    "prompt": "Fix the following code:\n{{code_snippet}}",
+    "tags": ["code", "debugging"],
+    "category": "programming"
+  }
+] 

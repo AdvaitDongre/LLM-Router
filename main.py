@@ -11,6 +11,8 @@ from datetime import datetime
 from dotenv import load_dotenv
 from utils.cache import get_cached_response, store_response
 from collections import defaultdict
+import requests
+import re
 
 load_dotenv()
 
@@ -34,10 +36,27 @@ async def chat_endpoint(request: Request, model: str = Query(...), ignore_cache:
     body = await request.json()
     prompt = body.get('prompt')
     template = body.get('template')
+    template_id = body.get('template_id')
+    template_vars = body.get('template_vars', {})
+    # Prompt Template Logic
+    if template_id:
+        # Load templates as list
+        with open('prompt_templates.json', 'r', encoding='utf-8') as f:
+            templates = json.load(f)
+        template_obj = next((t for t in templates if t['id'] == template_id), None)
+        if not template_obj:
+            raise HTTPException(status_code=400, detail=f'Template id {template_id} not found')
+        # Substitute variables in template
+        def sub_vars(tmpl, vars):
+            def repl(match):
+                key = match.group(1)
+                return str(vars.get(key, f'{{{{{key}}}}}'))
+            return re.sub(r'\{\{(.*?)\}\}', repl, tmpl)
+        prompt = sub_vars(template_obj['prompt'], template_vars)
+    elif template and template in PROMPT_TEMPLATES:
+        prompt = PROMPT_TEMPLATES[template].replace('{prompt}', prompt)
     if not prompt:
         raise HTTPException(status_code=400, detail='Missing prompt')
-    if template and template in PROMPT_TEMPLATES:
-        prompt = PROMPT_TEMPLATES[template].replace('{prompt}', prompt)
     # Check cache first unless ignore_cache is True
     if not ignore_cache:
         cached_response, cached_timestamp = get_cached_response(prompt, model)
