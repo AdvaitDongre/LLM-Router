@@ -1,27 +1,74 @@
 # codes.txt
 # ---
-# Test all features of llm-router using single-line curl commands
+# This file contains single-line curl commands for all major features of llm-router.
+#
+# USAGE:
+# - For Windows (PowerShell/cmd): Use the commands under [WINDOWS].
+# - For Bash (Linux/macOS/Git Bash): Use the commands under [BASH].
+#
+# Replace YOUR_PROMPT_ID as needed.
+
+# =====================
+# [WINDOWS]
+# =====================
 
 # 0. List available models
 curl -X GET "http://127.0.0.1:8000/models"
 
-# 1. Test /chat with Llama-3.1-8b-instant
+# 1. Test /chat with Llama-3.1-8b-instant (Groq)
 curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"What is the capital of France?\"}"
 
-# 2. Test /chat with Gemini
-curl -X POST "http://127.0.0.1:8000/chat?model=gemini" -H "Content-Type: application/json" -d "{\"prompt\": \"Tell me a joke.\"}"
+# 2. Test /chat with Gemini-2.5-flash
+curl -X POST "http://127.0.0.1:8000/chat?model=gemini-2.5-flash" -H "Content-Type: application/json" -d "{\"prompt\": \"Tell me a joke.\"}"
 
-# 3. Test /chat with a prompt template
-curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"Explain gravity.\", \"template\": \"friendly\"}"
+# 3. Test /chat with a prompt template (Llama-3.1-8b-instant)
+curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"template_id\": \"TEMPLATE_ID\", \"template_vars\": {\"VAR_NAME\": \"VAR_VALUE\"}}"
 
-# 4. Test /rate endpoint
-# Replace YOUR_PROMPT_ID with the prompt_id from a /chat response
-curl -X POST "http://127.0.0.1:8000/rate?prompt_id=abc123gemini1&score=5"
+# 4. Test /chat with a prompt template (Gemini-2.5-flash)
+curl -X POST "http://127.0.0.1:8000/chat?model=gemini-2.5-flash" -H "Content-Type: application/json" -d "{\"template_id\": \"TEMPLATE_ID\", \"template_vars\": {\"VAR_NAME\": \"VAR_VALUE\"}}"
 
-# 5. Test fallback
-# Remove or comment out GROQ_API_KEY in your .env, then run:
+# 5. Test /rate endpoint (replace YOUR_PROMPT_ID)
+curl -X POST "http://127.0.0.1:8000/rate?prompt_id=YOUR_PROMPT_ID&score=5" -H "Content-Type: application/json" -d "{\"feedback\": \"Great answer!\"}"
+
+# 6. Test fallback (remove/comment GROQ_API_KEY in .env)
 curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"Fallback test.\"}"
-# You should get an error if both models are misconfigured, or a Gemini response if only Llama-3.1-8b-instant is misconfigured.
 
 # ---
-# After running the above, check logs/prompts.json and logs/prompts.csv for entries. 
+
+# =====================
+# [BASH]
+# =====================
+
+# 0. List available models
+curl -X GET 'http://127.0.0.1:8000/models'
+
+# 1. Test /chat with Llama-3.1-8b-instant (Groq)
+curl -X POST 'http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant' -H 'Content-Type: application/json' -d '{"prompt": "What is the capital of France?"}'
+
+# 2. Test /chat with Gemini-2.5-flash
+curl -X POST 'http://127.0.0.1:8000/chat?model=gemini-2.5-flash' -H 'Content-Type: application/json' -d '{"prompt": "Tell me a joke."}'
+
+# 3. Test /chat with a prompt template (Llama-3.1-8b-instant)
+curl -X POST 'http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant' -H 'Content-Type: application/json' -d '{"template_id": "TEMPLATE_ID", "template_vars": {"VAR_NAME": "VAR_VALUE"}}'
+
+# 4. Test /chat with a prompt template (Gemini-2.5-flash)
+curl -X POST 'http://127.0.0.1:8000/chat?model=gemini-2.5-flash' -H 'Content-Type: application/json' -d '{"template_id": "TEMPLATE_ID", "template_vars": {"VAR_NAME": "VAR_VALUE"}}'
+
+# 5. Test /rate endpoint (replace YOUR_PROMPT_ID)
+curl -X POST 'http://127.0.0.1:8000/rate?prompt_id=YOUR_PROMPT_ID&score=5' -H 'Content-Type: application/json' -d '{"feedback": "Great answer!"}'
+
+# 6. Test fallback (remove/comment GROQ_API_KEY in .env)
+curl -X POST 'http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant' -H 'Content-Type: application/json' -d '{"prompt": "Fallback test."}'
+
+# ---
+# After running the above, check logs/prompts.json and logs/prompts.csv for entries.
+
+# =====================
+# [FRONTEND]
+# =====================
+# To use the Streamlit frontend, run:
+#   streamlit run streamlit_app.py
+# The UI will be available at http://localhost:8501
+# Features: Model/template selection, chat, analytics, ratings, session management. 
+#
+# Note: Model names are case-sensitive and must match those returned by /models. The above are examples; use /models to see all available models for your API keys. 

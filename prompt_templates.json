@@ -12,5 +12,26 @@
     "prompt": "Fix the following code:\n{{code_snippet}}",
     "tags": ["code", "debugging"],
     "category": "programming"
+  },
+  {
+    "id": "friendly",
+    "title": "Friendly Explainer",
+    "prompt": "Explain the following in a friendly way for {{audience}}: {{topic}}",
+    "tags": ["explain", "friendly", "audience"],
+    "category": "education"
+  },
+  {
+    "id": "summarize",
+    "title": "Summarizer",
+    "prompt": "Summarize the following text in {{num_sentences}} sentences: {{text}}",
+    "tags": ["summarize", "text", "shorten"],
+    "category": "productivity"
+  },
+  {
+    "id": "explain_like_5",
+    "title": "Explain Like I'm 5",
+    "prompt": "Explain this like I'm 5 years old: {{concept}}",
+    "tags": ["explain", "simple", "ELI5"],
+    "category": "education"
   }
 ] 

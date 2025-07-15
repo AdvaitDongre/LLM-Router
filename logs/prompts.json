@@ -141,5 +141,38 @@
     "prompt_id": "8292d34d0fbeae44",
     "rating": null,
     "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:38:33.915597",
+    "prompt": "What is the capital of France?",
+    "model": "llama-3.3-70b-versatile",
+    "response": "The capital of France is Paris.",
+    "latency_ms": 200,
+    "token_count": 50,
+    "prompt_id": "98c00c476a7226de",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:43:33.291178",
+    "prompt": "Fallback test.",
+    "model": "llama-3.1-8b-instant",
+    "response": "A fallback test is a type of test used in user experience (UX) and user interface (UI) design to ensure that a product or feature remains usable and accessible when a primary design or functionality fails.\n\nHere are some common scenarios where a fallback test is used:\n\n1. **Error handling**: When a user enters invalid data or an error occurs, a fallback test ensures that the product still provides a usable experience and guides the user to resolve the issue.\n2. **Network failures**: When a network connection is lost or slow, a fallback test ensures that the product remains functional and provides a good user experience, even when the primary functionality fails.\n3. **Device or browser incompatibility**: When a user accesses the product on a device or browser that is not supported, a fallback test ensures that the product still provides a usable experience and guides the user to a compatible device or browser.\n4. **Primary design failure**: When a primary design or functionality fails, a fallback test ensures that the product remains usable and accessible.\n\nTo conduct a fallback test, designers and developers typically follow these steps:\n\n1. **Identify the primary design or functionality**: Identify the primary design or functionality that is being tested.\n2. **Create a failure scenario**: Create a scenario where the primary design or functionality fails.\n3. **Test the fallback**: Test the fallback design or functionality to ensure that it provides a usable and accessible experience.\n4. **Evaluate the results**: Evaluate the results of the test to determine whether the fallback design or functionality meets the usability and accessibility requirements.\n\nSome common tools used for fallback testing include:\n\n1. **Manual testing**: Manual testing involves testing the product manually to identify failures and evaluate the usability and accessibility of the fallback design or functionality.\n2. **Automated testing**: Automated testing involves using tools such as Selenium or Appium to automate the testing process and detect failures.\n3. **Usability testing tools**: Usability testing tools such as UserTesting or TryMyUI allow designers and developers to conduct remote usability testing and evaluate the usability and accessibility of the fallback design or functionality.\n\nBy conducting fallback tests, designers and developers can ensure that their products remain usable and accessible even when primary designs or functionalities fail, providing a better user experience and minimizing the risk of errors or crashes.",
+    "latency_ms": 892,
+    "token_count": 497,
+    "prompt_id": "7e8f85846731489d",
+    "rating": null,
+    "from_cache": false
+  },
+  {
+    "timestamp": "2025-07-15T20:43:33.291178",
+    "prompt": "Fallback test.",
+    "model": "llama-3.1-8b-instant",
+    "response": "A fallback test is a type of test used in user experience (UX) and user interface (UI) design to ensure that a product or feature remains usable and accessible when a primary design or functionality fails.\n\nHere are some common scenarios where a fallback test is used:\n\n1. **Error handling**: When a user enters invalid data or an error occurs, a fallback test ensures that the product still provides a usable experience and guides the user to resolve the issue.\n2. **Network failures**: When a network connection is lost or slow, a fallback test ensures that the product remains functional and provides a good user experience, even when the primary functionality fails.\n3. **Device or browser incompatibility**: When a user accesses the product on a device or browser that is not supported, a fallback test ensures that the product still provides a usable experience and guides the user to a compatible device or browser.\n4. **Primary design failure**: When a primary design or functionality fails, a fallback test ensures that the product remains usable and accessible.\n\nTo conduct a fallback test, designers and developers typically follow these steps:\n\n1. **Identify the primary design or functionality**: Identify the primary design or functionality that is being tested.\n2. **Create a failure scenario**: Create a scenario where the primary design or functionality fails.\n3. **Test the fallback**: Test the fallback design or functionality to ensure that it provides a usable and accessible experience.\n4. **Evaluate the results**: Evaluate the results of the test to determine whether the fallback design or functionality meets the usability and accessibility requirements.\n\nSome common tools used for fallback testing include:\n\n1. **Manual testing**: Manual testing involves testing the product manually to identify failures and evaluate the usability and accessibility of the fallback design or functionality.\n2. **Automated testing**: Automated testing involves using tools such as Selenium or Appium to automate the testing process and detect failures.\n3. **Usability testing tools**: Usability testing tools such as UserTesting or TryMyUI allow designers and developers to conduct remote usability testing and evaluate the usability and accessibility of the fallback design or functionality.\n\nBy conducting fallback tests, designers and developers can ensure that their products remain usable and accessible even when primary designs or functionalities fail, providing a better user experience and minimizing the risk of errors or crashes.",
+    "latency_ms": 0,
+    "token_count": null,
+    "prompt_id": "7e8f85846731489d",
+    "rating": null,
+    "from_cache": true
   }
 ]

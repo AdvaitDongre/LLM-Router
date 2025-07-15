@@ -26,3 +26,50 @@ Luna found herself back in the attic, but she was no longer alone. Her owner, a 
 
 From that day on, Luna wore the magic hat whenever she wanted to explore the magical world. She used her powers to help those in need, making sure the house was always clean and the food was always plentiful. And whenever she needed a break from her responsibilities,",1052,560,0a8d9f5ffe553ffd,,False
 2025-07-15T20:18:45.042379,heyy bro,llama-3.1-8b-instant,What's up? Is there something I can help you with or you just wanna chat?,184,57,8292d34d0fbeae44,,False
+2025-07-15T20:38:33.915597,What is the capital of France?,llama-3.3-70b-versatile,The capital of France is Paris.,200,50,98c00c476a7226de,,False
+2025-07-15T20:43:33.291178,Fallback test.,llama-3.1-8b-instant,"A fallback test is a type of test used in user experience (UX) and user interface (UI) design to ensure that a product or feature remains usable and accessible when a primary design or functionality fails.
+
+Here are some common scenarios where a fallback test is used:
+
+1. **Error handling**: When a user enters invalid data or an error occurs, a fallback test ensures that the product still provides a usable experience and guides the user to resolve the issue.
+2. **Network failures**: When a network connection is lost or slow, a fallback test ensures that the product remains functional and provides a good user experience, even when the primary functionality fails.
+3. **Device or browser incompatibility**: When a user accesses the product on a device or browser that is not supported, a fallback test ensures that the product still provides a usable experience and guides the user to a compatible device or browser.
+4. **Primary design failure**: When a primary design or functionality fails, a fallback test ensures that the product remains usable and accessible.
+
+To conduct a fallback test, designers and developers typically follow these steps:
+
+1. **Identify the primary design or functionality**: Identify the primary design or functionality that is being tested.
+2. **Create a failure scenario**: Create a scenario where the primary design or functionality fails.
+3. **Test the fallback**: Test the fallback design or functionality to ensure that it provides a usable and accessible experience.
+4. **Evaluate the results**: Evaluate the results of the test to determine whether the fallback design or functionality meets the usability and accessibility requirements.
+
+Some common tools used for fallback testing include:
+
+1. **Manual testing**: Manual testing involves testing the product manually to identify failures and evaluate the usability and accessibility of the fallback design or functionality.
+2. **Automated testing**: Automated testing involves using tools such as Selenium or Appium to automate the testing process and detect failures.
+3. **Usability testing tools**: Usability testing tools such as UserTesting or TryMyUI allow designers and developers to conduct remote usability testing and evaluate the usability and accessibility of the fallback design or functionality.
+
+By conducting fallback tests, designers and developers can ensure that their products remain usable and accessible even when primary designs or functionalities fail, providing a better user experience and minimizing the risk of errors or crashes.",892,497,7e8f85846731489d,,False
+2025-07-15T20:43:33.291178,Fallback test.,llama-3.1-8b-instant,"A fallback test is a type of test used in user experience (UX) and user interface (UI) design to ensure that a product or feature remains usable and accessible when a primary design or functionality fails.
+
+Here are some common scenarios where a fallback test is used:
+
+1. **Error handling**: When a user enters invalid data or an error occurs, a fallback test ensures that the product still provides a usable experience and guides the user to resolve the issue.
+2. **Network failures**: When a network connection is lost or slow, a fallback test ensures that the product remains functional and provides a good user experience, even when the primary functionality fails.
+3. **Device or browser incompatibility**: When a user accesses the product on a device or browser that is not supported, a fallback test ensures that the product still provides a usable experience and guides the user to a compatible device or browser.
+4. **Primary design failure**: When a primary design or functionality fails, a fallback test ensures that the product remains usable and accessible.
+
+To conduct a fallback test, designers and developers typically follow these steps:
+
+1. **Identify the primary design or functionality**: Identify the primary design or functionality that is being tested.
+2. **Create a failure scenario**: Create a scenario where the primary design or functionality fails.
+3. **Test the fallback**: Test the fallback design or functionality to ensure that it provides a usable and accessible experience.
+4. **Evaluate the results**: Evaluate the results of the test to determine whether the fallback design or functionality meets the usability and accessibility requirements.
+
+Some common tools used for fallback testing include:
+
+1. **Manual testing**: Manual testing involves testing the product manually to identify failures and evaluate the usability and accessibility of the fallback design or functionality.
+2. **Automated testing**: Automated testing involves using tools such as Selenium or Appium to automate the testing process and detect failures.
+3. **Usability testing tools**: Usability testing tools such as UserTesting or TryMyUI allow designers and developers to conduct remote usability testing and evaluate the usability and accessibility of the fallback design or functionality.
+
+By conducting fallback tests, designers and developers can ensure that their products remain usable and accessible even when primary designs or functionalities fail, providing a better user experience and minimizing the risk of errors or crashes.",0,,7e8f85846731489d,,True
