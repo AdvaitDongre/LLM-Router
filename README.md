@@ -1,6 +1,6 @@
 # llm-router
 
-A FastAPI-based backend to route chat prompts to either GROQ (OpenAI-compatible, e.g. Mistral-7B) or Gemini (Google Generative AI) models, with logging, fallback, rating, and prompt templates.
+A FastAPI-based backend to route chat prompts to either GROQ (OpenAI-compatible, e.g. llama-3.1-8b-instant) or Gemini (Google Generative AI) models, with logging, fallback, rating, and prompt templates.
 
 ---
 
