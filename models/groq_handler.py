@@ -6,6 +6,8 @@ class GroqHandler:
         self.api_key = os.getenv('GROQ_API_KEY')
         self.api_url = os.getenv('GROQ_API_URL', 'https://api.groq.com/openai/v1/chat/completions')
         self.model = os.getenv('GROQ_MODEL', 'mistral-7b')
+        if not self.api_key:
+            raise ValueError('GROQ_API_KEY is not set in environment')
 
     def generate(self, prompt: str) -> str:
         headers = {

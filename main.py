@@ -4,8 +4,6 @@ from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import Optional
-from models.groq_handler import GroqHandler
-from models.gemini_handler import GeminiHandler
 from utils.logger import log_interaction, log_rating, get_prompt_id
 from utils.tokens import estimate_token_count
 import json
@@ -15,9 +13,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = FastAPI()
-
-groq_handler = GroqHandler()
-gemini_handler = GeminiHandler()
 
 # Load prompt templates
 try:
@@ -32,6 +27,8 @@ class ChatRequest(BaseModel):
 
 @app.post('/chat')
 async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|gemini)$')):
+    from models.groq_handler import GroqHandler
+    from models.gemini_handler import GeminiHandler
     body = await request.json()
     prompt = body.get('prompt')
     template = body.get('template')
@@ -39,8 +36,14 @@ async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|
         raise HTTPException(status_code=400, detail='Missing prompt')
     if template and template in PROMPT_TEMPLATES:
         prompt = PROMPT_TEMPLATES[template].replace('{prompt}', prompt)
-    handlers = [(model, groq_handler if model == 'groq' else gemini_handler),
-                ('gemini' if model == 'groq' else 'groq', gemini_handler if model == 'groq' else groq_handler)]
+    handlers = []
+    errors = {}
+    for m in [model, 'gemini' if model == 'groq' else 'groq']:
+        try:
+            handler = GroqHandler() if m == 'groq' else GeminiHandler()
+            handlers.append((m, handler))
+        except Exception as e:
+            errors[m] = str(e)
     response_text = None
     model_used = None
     latency_ms = None
@@ -58,7 +61,8 @@ async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|
             error = str(e)
             continue
     if response_text is None:
-        raise HTTPException(status_code=500, detail=f'Both models failed: {error}')
+        detail = f'Both models failed. Errors: {errors}. Last error: {error}'
+        raise HTTPException(status_code=500, detail=detail)
     timestamp = datetime.utcnow().isoformat()
     prompt_id = get_prompt_id(timestamp, prompt, model_used)
     log_interaction(timestamp, prompt, model_used, response_text, latency_ms, token_count, prompt_id)
