@@ -73,14 +73,9 @@ llm-chatservice/
 2. **Set up your `.env` file:**
    Create a `.env` file in the project root with the following content:
    ```env
-   # GROQ API
-   GROQ_API_KEY=your-groq-api-key-here
+   GROQ_API_KEY=your_api_key
    GROQ_API_URL=https://api.groq.com/openai/v1/chat/completions
-   GROQ_MODEL=mistral-7b
-
-   # GEMINI API
-   GEMINI_API_KEY=your-gemini-api-key-here
-   GEMINI_MODEL=gemini-pro
+   GEMINI_API_KEY=your_api_key
    ```
    Replace the values with your actual API keys.
 
