@@ -26,7 +26,7 @@ class ChatRequest(BaseModel):
     template: Optional[str] = None
 
 @app.post('/chat')
-async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|gemini)$')):
+async def chat_endpoint(request: Request, model: str = Query(...)):
     from models.groq_handler import GroqHandler
     from models.gemini_handler import GeminiHandler
     body = await request.json()
@@ -36,11 +36,24 @@ async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|
         raise HTTPException(status_code=400, detail='Missing prompt')
     if template and template in PROMPT_TEMPLATES:
         prompt = PROMPT_TEMPLATES[template].replace('{prompt}', prompt)
+    # Try the requested model, then fallback to the other provider
     handlers = []
     errors = {}
-    for m in [model, 'gemini' if model == 'groq' else 'groq']:
+    # Determine provider by model name
+    def is_gemini(m):
+        return m.startswith('gemini')
+    def is_llama(m):
+        return m.startswith('llama-3.1-8b')
+    # Try requested model, then fallback
+    fallback_model = 'gemini-2.5-flash' if is_llama(model) else 'llama-3.1-8b-instant'
+    for m in [model, fallback_model]:
         try:
-            handler = GroqHandler() if m == 'groq' else GeminiHandler()
+            if is_llama(m):
+                handler = GroqHandler(model_override=m)
+            elif is_gemini(m):
+                handler = GeminiHandler(model_override=m)
+            else:
+                raise ValueError(f'Unknown model: {m}')
             handlers.append((m, handler))
         except Exception as e:
             errors[m] = str(e)
@@ -52,10 +65,17 @@ async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|
     for m, handler in handlers:
         start = time.time()
         try:
-            response_text = handler.generate(prompt)
+            result = handler.generate(prompt)
+            if isinstance(result, tuple):
+                response_text, model_token_count = result
+            else:
+                response_text, model_token_count = result, None
             latency_ms = int((time.time() - start) * 1000)
             model_used = m
-            token_count = estimate_token_count(prompt + response_text)
+            if model_token_count is not None:
+                token_count = model_token_count
+            else:
+                token_count = estimate_token_count(prompt + response_text, model=m)
             break
         except Exception as e:
             error = str(e)
@@ -73,6 +93,16 @@ async def chat_endpoint(request: Request, model: str = Query(..., regex='^(groq|
         'latency_ms': latency_ms,
         'token_count': token_count
     })
+
+@app.get('/models')
+def list_models():
+    return {
+        "available_models": [
+            "llama-3.1-8b-instant",  # via Groq
+            "gemini-2.5-flash"  # Gemini 2.5 Flash
+        ],
+        "note": "You can use other Llama-3.1-8b or Gemini models by changing the model name in the query parameter if supported by your API key."
+    }
 
 @app.post('/rate')
 async def rate_endpoint(prompt_id: str = Query(...), score: int = Query(..., ge=1, le=5)):

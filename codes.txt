@@ -1,0 +1,27 @@
+# codes.txt
+# ---
+# Test all features of llm-router using single-line curl commands
+
+# 0. List available models
+curl -X GET "http://127.0.0.1:8000/models"
+
+# 1. Test /chat with Llama-3.1-8b-instant
+curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"What is the capital of France?\"}"
+
+# 2. Test /chat with Gemini
+curl -X POST "http://127.0.0.1:8000/chat?model=gemini" -H "Content-Type: application/json" -d "{\"prompt\": \"Tell me a joke.\"}"
+
+# 3. Test /chat with a prompt template
+curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"Explain gravity.\", \"template\": \"friendly\"}"
+
+# 4. Test /rate endpoint
+# Replace YOUR_PROMPT_ID with the prompt_id from a /chat response
+curl -X POST "http://127.0.0.1:8000/rate?prompt_id=abc123gemini1&score=5"
+
+# 5. Test fallback
+# Remove or comment out GROQ_API_KEY in your .env, then run:
+curl -X POST "http://127.0.0.1:8000/chat?model=llama-3.1-8b-instant" -H "Content-Type: application/json" -d "{\"prompt\": \"Fallback test.\"}"
+# You should get an error if both models are misconfigured, or a Gemini response if only Llama-3.1-8b-instant is misconfigured.
+
+# ---
+# After running the above, check logs/prompts.json and logs/prompts.csv for entries. 

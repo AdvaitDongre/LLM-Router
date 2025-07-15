@@ -2,14 +2,19 @@ import os
 import google.generativeai as genai
 
 class GeminiHandler:
-    def __init__(self):
+    def __init__(self, model_override=None):
         self.api_key = os.getenv('GEMINI_API_KEY')
         if not self.api_key:
             raise ValueError('GEMINI_API_KEY is not set in environment')
         genai.configure(api_key=self.api_key)
-        self.model = os.getenv('GEMINI_MODEL', 'gemini-pro')
+        self.model = model_override or os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
 
-    def generate(self, prompt: str) -> str:
+    def generate(self, prompt: str):
         model = genai.GenerativeModel(self.model)
         response = model.generate_content(prompt)
-        return response.text.strip() if hasattr(response, 'text') else str(response) 
+        text = response.text.strip() if hasattr(response, 'text') else str(response)
+        # Try to get token count from response.usage_metadata if available
+        token_count = None
+        if hasattr(response, 'usage_metadata') and response.usage_metadata:
+            token_count = getattr(response.usage_metadata, 'total_token_count', None)
+        return text, token_count 
