@@ -7,7 +7,9 @@ class GeminiHandler:
         if not self.api_key:
             raise ValueError('GEMINI_API_KEY is not set in environment')
         genai.configure(api_key=self.api_key)
-        self.model = model_override or os.getenv('GEMINI_MODEL', 'gemini-2.5-flash')
+        self.model = model_override
+        if not self.model:
+            raise ValueError('No model specified for GeminiHandler')
 
     def generate(self, prompt: str):
         model = genai.GenerativeModel(self.model)
