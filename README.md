@@ -4,6 +4,13 @@ A FastAPI-based backend to route chat prompts to either GROQ (OpenAI-compatible,
 
 ---
 
+
+## HOW TO SETUP/RUN THE PROJECT + DEMO AT THE END(INCLUDING THE FRONTEND)
+https://github.com/user-attachments/assets/ea3224e7-725b-49f2-a0f7-605086b7d4dd
+
+
+
+
 ## Features
 - **Supports 12+ models** (see below for full list; easily extensible)
 - **ignore_cache**: Force fresh response, bypassing persistent cache (see usage examples)
